@@ -1,7 +1,8 @@
 ## Ignore Mac DS_Store files
 
-
-##node_modules
+```
+node_modules
 .DS_Store
-##.env
+.env
 
+```
