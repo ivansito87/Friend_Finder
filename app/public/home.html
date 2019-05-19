@@ -1,64 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ivan's Hookup</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Ivan Rendon">
+        <title>Ivan's HookApp</title>
+        <link rel="icon" href="favicon.ico?v=1.1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:500&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="../css/style.css">
-
-</head>
-<body>
-    <div class="container">
-        <div class="row justify-content-sm-center">
-            <div class="col col-sm-4">
-                
-            </div>
-            <div class="col-md-auto mt-5">
-                <div class="jumbotron">
-                        <h1 class="display-3 mt-5 text-center">Welcome to my Hookup</h1>
+        <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:500&display=swap" rel="stylesheet">
+        <!--==================================== Custom Css ======================================-->
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <!--==================================== Body ======================================-->
+    <body>
+        <header>
+            <div class="overlay"></div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/mp4">
+            </video>
+            <div class="container h-100">
+                <div class="d-flex h-100 text-center align-items-center">
+                    <div class="w-100 text-white">
+                        <h1 class="display-2">Welcome to HookApp</h1>
                         <p class="lead text-center">This survey is being conducted by Ivan Rendon, student at the
-                        Full-Stack Software Developer Program at Georgia Tech. Participation in this application is completely voluntary. You
-                        can refuse to answer any question and you can stop participation at any time.</p>
+                            Full-Stack Software Developer Program at Georgia Tech. Participation in this application is
+                            completely voluntary.
+                            You
+                            can refuse to answer any question and you can stop participation at any time.</p>
                         <hr class="my-4">
                         <p>This End-User License Agreement (EULA) is a legal agreement between you and the Developer and
-                        the mentioned author Ivan Rendon. By making use of this Application for dating purposes, you agree to be bounded by the terms of this EULA.
-                        If you do not agree to the terms of this EULA, do not fill out the form or use the SOFTWARE PRODUCT.</p>
-                        <a class="btn btn-outline-info btn-lg btn-block" href="/survey" role="button">Take survey</a>
+                            the mentioned author Ivan Rendon. By making use of this Application for dating purposes, you
+                            agree to be bounded by
+                            the terms of this EULA.
+                            If you do not agree to the terms of this EULA, do not fill out the form or use the SOFTWARE
+                            PRODUCT.</p>
+                        <a class="btn btn-outline-info btn-lg btn-lg mt-5" href="/survey" role="button">Take survey</a>
                     </div>
-
+                </div>
             </div>
-            <div class="col col-sm-4 text-center">
-                <h5><a href="/api/friends">Friends API</a>&emsp;|&emsp;<a href="githubrepo">Github Repo</a></h5>
-            </div>
+        </header>
         </div>
-   
-    </div>
-        
-
-
-
-
-
-
-
-
-
-
-    <!--==================================== scripts =========================-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
+        <!--==================================== scripts =====================================-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
 </html>

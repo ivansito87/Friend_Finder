@@ -4,6 +4,7 @@ var express = require("express");
 var path = require("path");
 var friends = require("./app/data/friends");
 var fs = require("fs");
+var favicon = require('serve-favicon');
 
 // =============== Set up Server
 var app = express();
@@ -12,6 +13,9 @@ var PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing ====== middle ware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname + "/app/css"));
+app.use(favicon(path.join(__dirname, "/app/public/my_ir_favicon.png")));
+
 
 // Start the server to begin listening =======
 app.listen(PORT, function () { 
@@ -37,10 +41,7 @@ app.post("/api/friends", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newFriend = req.body;
-
-    // for (let i = 0; i < newFriend.scores.length; i++){
-    //     newFriend.scores[i] = parseFloat(newFriend.scores[i])
-    // }    
+   
     console.log(newFriend);
 
     const resultsArr = [];
@@ -57,27 +58,6 @@ app.post("/api/friends", function (req, res) {
     let friendIndex = resultsArr.indexOf(Math.min.apply(Math, resultsArr));
 
     console.log(friendIndex);
-    // default friend match is the first friend but result will be whoever has the minimum difference in scores
-    // var bestFriendIndex = 0;
-    // var minimumDifference = 40;
-
-    // // in this for-loop, start off with a zero difference and compare the user and the ith friend scores, one set at a time
-    // //  whatever the difference is, add to the total difference
-    // for (var i = 0; i < friends.length; i++) {
-    //     var totalDifference = 0;
-    //     for (var j = 0; j < friends[i].scores.length; j++) {
-    //         var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
-    //         totalDifference += difference;
-    //     }
-
-    //     // if there is a new minimum, change the best friend index and set the new minimum for next iteration comparisons
-    //     if (totalDifference < minimumDifference) {
-    //         bestFriendIndex = i;
-    //         minimumDifference = totalDifference;
-    //     }
-    // }
-
-    // console.log(friends[bestFriendIndex]);
 
     friends.push(newFriend);
 

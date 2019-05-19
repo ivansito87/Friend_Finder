@@ -1,261 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey</title>
-    
-    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:500&display=swap" rel="stylesheet">
-    
-    
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Ivan Rendon">
+        <title>Ivan's Survey</title>
+        <link rel="icon" href="favicon.ico?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:500&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="row justify-content-sm-center">
-            <div class="col col-sm-4">
-
-            </div>
-            <div class="col-md-auto mt-5">
-                <div class="jumbotron">
-                    <h1 class="display-5 mt-2 text-center">Please fill out the form with your information</h1>
-                    <hr />
-                    <form>
-                        <h4 class="display-5 mt-2 text-rigth">What is your name?</h4>
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="First and Last name (Required)" id="name">
-                            </div>
-                        </div>
-                        <hr/>
-                        <h4 class="display-5 mt-2 text-rigth">Share something about you?</h4>
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Tell us something about you (Required)" id="about">
-                            </div>
-                        </div>
-                        <hr />
-                        <h4 class="display-5 mt-2 text-rigth">Link to your picture</h4>
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="URL to picture (Required)" id="photo">
-                            </div>
-                        </div>
-                        <hr />
-                        <h3 class="display-4 text-center my-3">Questions</h3>
-                        <h4>Instructions</h4>
-                        <p>On a scale of 1-5, please indicate how you feel toward various aspects of Tinder. 1 means strongly agree and 5 means
-                        strongly disagree.</p>
-                        <hr />
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">Online dating is an effective way to meet people.</label></h5>
-                            <select class="form-control" id="q1">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">I feel that people that use online dating are looking for a long-term relationship.</label></h5>
-                            <select class="form-control" id="q2">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">Online dating is more effective than being set up with someone on a blind date.</label></h5>
-                            <select class="form-control" id="q3">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">I think Hookup is a good alternative for people who do not have success with traditional dating.</label></h5>
-                            <select class="form-control" id="q4">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">Hookup is more effective than being set up with someone on a blind date.</label></h5>
-                            <select class="form-control" id="q5">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">I would use the Hookup app and meet someone from it casually.</label></h5>
-                            <select class="form-control" id="q6">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">The outcome of going to Hookup date app is likely to be positive.</label></h5>
-                            <select class="form-control" id="q7">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">I think Hookup is a good alternative for people who do not have success with traditional dating.</label></h5>
-                            <select class="form-control" id="q8">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">Online dating is a trustworthy way to learn about people.</label></h5>
-                            <select class="form-control" id="q9">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <h5><label for="exampleFormControlSelect1">I would recommend the use of Hookup to a friend.</label></h5>
-                            <select class="form-control" id="q10">
-                                <option value="1">1 Strongly Agree</option>
-                                <option value="2">2 Agree</option>
-                                <option value="3">3 Neither</option>
-                                <option value="4">4 Disagree</option>
-                                <option value="5">5 Strongly Disagree</option>
-                            </select>
-                        </div>
-                        
-                    
-                    <hr class="my-4">By installing, copying, or otherwise using the SOFTWARE PRODUCT, you agree to be
-                    bounded by the terms of this EULA.
-                    If you do not agree to the terms of this EULA, do not install or use the SOFTWARE PRODUCT.</p>
-                    <button class="btn btn-outline-info btn-lg btn-block" href="/api/friends" role="button" id="submit">Find Freinds Nearby</button>
-                </form>
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <!--==================================== Custom Css ======================================-->
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <!--==================================== Body ======================================-->
+    <body>
+        <div class="container">
+            <div class="row justify-content-sm-center">
+                <div class="col col-sm-4">
                 </div>
-
+                <div class="col-md-auto mt-5">
+                    <div class="jumbotron">
+                        <h1 class="display-5 mt-2 text-center">Please fill out the form with your information</h1>
+                        <hr />
+                        <form class="text-center">
+                            <h4 class="display-5 mt-2 text-center">What is your name?</h4>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First and Last name (Required)"
+                                        id="name">
+                                </div>
+                            </div>
+                            <hr />
+                            <h4 class="display-5 mt-2 text-center">Share something about you?</h4>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control"
+                                        placeholder="Tell us something about you (Required)" id="about">
+                                </div>
+                            </div>
+                            <hr />
+                            <h4 class="display-5 mt-2 text-rigth">Link to your picture</h4>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="URL to picture (Required)"
+                                        id="photo">
+                                </div>
+                            </div>
+                            <hr />
+                            <h3 class="display-4 text-center my-3">Questions</h3>
+                            <h4>Instructions</h4>
+                            <p>On a scale of 1-5, please indicate how you feel toward various aspects of HookApp. 1 means
+                                strongly agree and 5 means
+                                strongly disagree.</p>
+                            <p>If you have any questions regarding the survey questions, please feel free to contact Ivan at
+                                770-688-7959 or
+                                <a id="anchor" href="https://ivanrendon.dev/" target="_blank">ivansito87@gmail.com</a></p>
+                            <hr />
+                            <p>The following questions are based on HookApp, a location-based matchmaking mobile application
+                                that connects users with
+                                others based on their photos. Users must answer all questions accordingly in order to have
+                                the ability to match anyone
+                                that is within the radius. You can only send a message to someone through the app once both
+                                users have “liked” each
+                                others' profiles.</p>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">Online dating is an effective way to meet
+                                        people.</label></h5>
+                                <select class="form-control" id="q1">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">I feel that people that use online dating are
+                                        looking for a long-term relationship.</label></h5>
+                                <select class="form-control" id="q2">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">Online dating is more effective than being set up
+                                        with someone on a blind date.</label></h5>
+                                <select class="form-control" id="q3">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">I think HookApp is a good alternative for people
+                                        who do not have success with traditional dating.</label></h5>
+                                <select class="form-control" id="q4">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">HookApp is more effective than being set up with
+                                        someone on a blind date.</label></h5>
+                                <select class="form-control" id="q5">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">I would use the HookApp app and meet someone from
+                                        it casually.</label></h5>
+                                <select class="form-control" id="q6">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">The outcome of going to HookApp date app is
+                                        likely to be positive.</label></h5>
+                                <select class="form-control" id="q7">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">I think HookApp is a good alternative for people
+                                        who do not have success with traditional dating.</label></h5>
+                                <select class="form-control" id="q8">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">Online dating is a trustworthy way to learn about
+                                        people.</label></h5>
+                                <select class="form-control" id="q9">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5><label for="exampleFormControlSelect1">I would recommend the use of HookApp to a
+                                        friend.</label></h5>
+                                <select class="form-control" id="q10">
+                                    <option value="1">1 Strongly Agree</option>
+                                    <option value="2">2 Agree</option>
+                                    <option value="3">3 Neither</option>
+                                    <option value="4">4 Disagree</option>
+                                    <option value="5">5 Strongly Disagree</option>
+                                </select>
+                            </div>
+                            <hr class="my-4">By agreeing to participate you are giving your consent for Ivan to use the
+                            information you provide in academic research.
+                            Thank you very much for your participation.</p>
+                            <button class="btn btn-outline-info btn-lg btn-lg" href="/api/friends" role="button"
+                                id="submit">Find Date</button>
+                            <h5 class="mt-4"><a href="/api/friends" id="anchor">Friends API&nbsp;</a>|<a href="https://github.com/ivansito87/Friend_Finder"
+                                    id="anchor">&nbsp;Github Repo</a></h5>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col col-sm-4 text-center">
-                <h5><a href="/api/friends">Friends API&nbsp;</a>|<a href="githubrepo">&nbsp;Github Repo</a></h5>
+            <!--==================================== Modal ==================================-->
+            <div class="modal animated zoomInDown in" id="exampleModalLong" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLongTitle">Your New Date</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 id="newDateName"></h4>
+                            <hr />
+                            <p id="aboutDate"></p>
+                            <img class="rounded mx-auto d-block img-fluid" alt="New_Date" id="newDatePicture">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="submit">Like</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="submit">Love</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-            <!-- Modal -->
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLongTitle">Your New Date</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h4 id="newDateName"></h4>
-                        <hr />
-                        <p id="aboutDate"></p>
-                        <img class="rounded mx-auto d-block img-fluid" alt="New_Date" id="newDatePicture">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ignore</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Like</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div> 
-    <script type="text/javascript">
-        // Question: What does this code do?
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-            console.log("Button Working!");
-            var newFriend = {
-                name: $("#name").val().trim(),
-                about: $("#about").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            };
-            // console.log(newFriend)
-
-            // Question: What does this code do??
-            $.post("/api/friends", newFriend)
-
-                // Returns a promise containing the data from the server
-                .then(function (data) {
-                    console.log(data);
-                    alert("You are about to find a new date...");
-                    $("#newDateName").text(data.name);
-                    $("#aboutDate").text(data.about);
-                    $("#newDatePicture").attr("src", data.photo);
-                    $("#exampleModalLong").modal("toggle");
-                })
-           
-         });
-
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-    <!--==================================== scripts =========================-->
-    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-
+        <!--==================================== jQuery ==================================-->
+        <script type="text/javascript">
+            // Question: What does this code do?
+            $("#submit").on("click", function (event) {
+                event.preventDefault();
+                // console.log("Button Working!");
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    about: $("#about").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        // console.log(data);
+                        alert("You are about to find a new date...");
+                        $("#newDateName").text(data.name);
+                        $("#aboutDate").text(data.about);
+                        $("#newDatePicture").attr("src", data.photo);
+                        $("#exampleModalLong").modal("toggle");
+                    })
+            });
+        </script>
+        <!--==================================== Scripts ======================================-->
+        <script src="https://code.jquery.com/jquery-3.4.0.js"
+            integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
 </html>
