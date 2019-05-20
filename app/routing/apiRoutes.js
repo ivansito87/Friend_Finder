@@ -19,7 +19,7 @@ module.exports = function (app) {
         // req.body hosts is equal to the JSON post sent from the user
         // This works because of our body parsing middleware
         var newFriend = req.body;
-        // console.log(newFriend);
+
 
         // We Crate a new array that will contain  the results of all the scores calculated
         const resultsArr = [];
