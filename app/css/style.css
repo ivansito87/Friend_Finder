@@ -146,10 +146,10 @@ select {
 }
 
 #anchor:hover {
-    background: -webkit-linear-gradient(#eee, #333);
+    background: -webkit-linear-gradient(rgb(121, 223, 236), rgb(61, 60, 60));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    text-decoration: none;
 }
 
 #submit {
@@ -235,4 +235,54 @@ select {
 .btn-outline-info:hover:before, .btn-outline-info:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+#slogan {
+    background: linear-gradient(to right, #EF629F, #EECDA3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+#connect {
+    background: none;
+    color: black;
+    position: relative;
+    height: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 1000ms ease all;
+    outline: none;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(187, 110, 110, 0.3);
+}
+
+#connect:hover {
+    background: none;
+    color: white;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(187, 110, 110, 0.3);
+}
+
+#connect:before, #connect:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: black;
+    transition: 800ms ease all;
+}
+
+#connect:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+#connect:hover:before, #connect:hover:after {
+    width: 100%;
+    transition: 1000ms ease all;
 }

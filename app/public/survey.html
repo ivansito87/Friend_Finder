@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +16,14 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <!--==================================== Custom Css ======================================-->
         <link rel="stylesheet" type="text/css" href="/style.css">
     </head>
-    <!--==================================== Body ======================================-->
+
+<!--==================================== Body ======================================-->
+
     <body>
         <div class="container">
             <div class="row justify-content-sm-center">
@@ -28,7 +33,7 @@
                     <div class="jumbotron">
                         <h1 class="display-5 mt-2 text-center">Please fill out the form with your information</h1>
                         <hr />
-                        <form class="text-center">
+                        <form class="text-center" id="form">
                             <h4 class="display-5 mt-2 text-center">What is your name?</h4>
                             <div class="form-row">
                                 <div class="col">
@@ -92,8 +97,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <h5><label for="exampleFormControlSelect1">Online dating is more effective than being set up
-                                        with someone on a blind date.</label></h5>
+                                <h5><label for="exampleFormControlSelect1">I think my friends using an online dating
+                                        website to meet people is a good idea.</label></h5>
                                 <select class="form-control" id="q3">
                                     <option value="1">1 Strongly Agree</option>
                                     <option value="2">2 Agree</option>
@@ -147,8 +152,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <h5><label for="exampleFormControlSelect1">I think HookApp is a good alternative for people
-                                        who do not have success with traditional dating.</label></h5>
+                                <h5><label for="exampleFormControlSelect1">I think HookApp app is a good way to
+                                        seek romance and adventure</label></h5>
                                 <select class="form-control" id="q8">
                                     <option value="1">1 Strongly Agree</option>
                                     <option value="2">2 Agree</option>
@@ -184,13 +189,36 @@
                             Thank you very much for your participation.</p>
                             <button class="btn btn-outline-info btn-lg btn-lg" href="/api/friends" role="button"
                                 id="submit">Find Date</button>
-                            <h5 class="mt-4"><a href="/api/friends" id="anchor">Friends API&nbsp;</a>|<a href="https://github.com/ivansito87/Friend_Finder"
-                                    id="anchor">&nbsp;Github Repo</a></h5>
+                            <h5 class="my-4"><a href="/api/friends" id="anchor">Friends API&nbsp;</a>|<a
+                                    href="https://github.com/ivansito87/Friend_Finder" id="anchor">&nbsp;Github Repo</a>
+                            </h5>
+                            <a id="connect" class="text-align-center mx-2" href="https://github.com/ivansito87" target="_blank">
+                                <i class="fab fa-github fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://gt.bootcampcontent.com/ivan.rendon" target="_blank">
+                                <i class="fab fa-gitlab fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://www.facebook.com/ivan.rendon.319" target="_blank">
+                                <i class="fab fa-facebook fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://www.snapchat.com/add/alexivansito" target="_blank">
+                                <i class="fab fa-snapchat fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://www.pinterest.com/ivansito87/" target="_blank">
+                                <i class="fab fa-pinterest fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://twitter.com/IvanRen19266618" target="_blank">
+                                <i class="fab fa-twitter fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://www.linkedin.com/in/ivan-rendon-368b53174/" target="_blank">
+                                <i class="fab fa-linkedin fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://stackoverflow.com/users/11216672/ivansito87?tab=profile"
+                                target="_blank">
+                                <i class="fab fa-stack-overflow fa-md"></i></a>
+                            <a id="connect" class="text-align-center mx-2" href="https://codepen.io/ivansito87/" target="_blank">
+                                <i class="fab fa-codepen fa-md"></i></a>
+                            <p class="h6 p-1 m-0 text-center text-dark">Copyright &copy; Ivan Rendon 2019</p>
                         </form>
                     </div>
                 </div>
             </div>
+            
             <!--==================================== Modal ==================================-->
+            
             <div class="modal animated zoomInDown in" id="exampleModalLong" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -215,41 +243,64 @@
                 </div>
             </div>
         </div>
+        
         <!--==================================== jQuery ==================================-->
+        
         <script type="text/javascript">
-            // Question: What does this code do?
+
             $("#submit").on("click", function (event) {
                 event.preventDefault();
-                // console.log("Button Working!");
-                var newFriend = {
-                    name: $("#name").val().trim(),
-                    about: $("#about").val().trim(),
-                    photo: $("#photo").val().trim(),
-                    scores: [
-                        $("#q1").val(),
-                        $("#q2").val(),
-                        $("#q3").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                    ]
-                };
-                $.post("/api/friends", newFriend)
-                    .then(function (data) {
-                        // console.log(data);
-                        alert("You are about to find a new date...");
-                        $("#newDateName").text(data.name);
-                        $("#aboutDate").text(data.about);
-                        $("#newDatePicture").attr("src", data.photo);
-                        $("#exampleModalLong").modal("toggle");
-                    })
+                if (!$("#name").val().trim() || !$("#about").val().trim() || !$("#photo").val().trim()) {
+                    $("#newDateName").text("LOL! we need more info!");
+                    $("#aboutDate").text("You will never find a date if you don't provide us with your info. Please fill out the form.");
+                    $("#newDatePicture").attr("src", "https://images.unsplash.com/photo-1530041539828-114de669390e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60");
+                    $("#exampleModalLong").modal("toggle");
+                } else {
+                    var newFriend = {
+                        name: $("#name").val().trim(),
+                        about: $("#about").val().trim(),
+                        photo: $("#photo").val().trim(),
+                        scores: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val()
+                        ]
+                    };
+                    $.post("/api/friends", newFriend)
+                        .then(function (data) {
+                            alert("You are about to find a new date...");
+                            $("#newDateName").text(data.name);
+                            $("#aboutDate").text(data.about);
+                            $("#newDatePicture").attr("src", data.photo);
+                            $("#exampleModalLong").modal("toggle");
+                        })
+                    $("#name").val("");
+                    $("#about").val("");
+                    $("#photo").val("");
+                    $("#q1").val("1");
+                    $("#q2").val("1");
+                    $("#q3").val("1");
+                    $("#q4").val("1");
+                    $("#q5").val("1");
+                    $("#q6").val("1");
+                    $("#q7").val("1");
+                    $("#q8").val("1");
+                    $("#q9").val("1");
+                    $("#q10").val("1");
+                }
             });
+
         </script>
-        <!--==================================== Scripts ======================================-->
+        
+        <!--==================================== JavaScript Scripts ======================================-->
+        
         <script src="https://code.jquery.com/jquery-3.4.0.js"
             integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -259,4 +310,5 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     </body>
+
 </html>
