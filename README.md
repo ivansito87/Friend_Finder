@@ -21,7 +21,7 @@ by clicking the link provided in the survey page
 
 
 ## ScreenShot
-![Screenshot of game](https://gfycat.com/apprehensiveimpressionablegalapagoshawk)
+![Screenshot of game](./app/images/paulina.gif)
 
 ## Technologies Used
 
